@@ -12,11 +12,11 @@
 <body>
 
     <div class="main-container">
-        <!-- Lado izquierdo: el juego -->
+        <!-- Juego--> -->
         <div class="game-area">
             <canvas id="gameCanvas" width="400" height="600"></canvas>
             
-            <!-- Menú de inicio y pausa -->
+            <!-- Menú -->
             <div id="menu-overlay">
                 <div class="menu-content">
                     <h1>NEON RACER</h1>
@@ -27,7 +27,7 @@
 
                     <!-- Selector de color del auto -->
                     <div class="menu-section">
-                        <h3>🎨 COLOR NEON</h3>
+                        <h3>COLOR</h3>
                         <div class="color-grid">
                             <button class="color-card active" data-color="#0f0" style="--clr: #0f0;">
                                 <div class="glow"></div>
@@ -50,7 +50,7 @@
 
                     <!-- Selector de diseños/decalcomanías -->
                     <div class="menu-section">
-                        <h3>⚡ DECALCOMANÍA</h3>
+                        <h3>DISEÑOS</h3>
                         <div class="design-grid">
                             <button class="design-btn active" data-design="ninguno">LISO</button>
                             <button class="design-btn" data-design="racer">FRANJAS</button>
@@ -61,14 +61,14 @@
 
                     <!-- Activar/desactivar carro guía con IA -->
                     <div class="menu-section">
-                        <h3>🤖 ASISTENTE NEURAL</h3>
+                        <h3>ASISTENTE</h3>
                         <div class="help-grid">
                             <button id="help-toggle-btn" class="design-btn">ASISTENCIA: OFF</button>
                         </div>
                     </div>
 
                     <!-- Botón para empezar a jugar -->
-                    <button id="start-btn" class="btn-primary" disabled>▶ INICIAR MOTOR</button>
+                    <button id="start-btn" class="btn-primary" disabled>▶ INICIAR JUEGO</button>
                 </div>
             </div>
         </div>
@@ -84,7 +84,7 @@
             
             <div class="action-display">
                 <p>COMANDO DETECTADO</p>
-                <div id="current-action">⚡ ESPERANDO...</div>
+                <div id="current-action">ESPERANDO...</div>
             </div>
 
             <!-- Instrucciones con emojis de manos -->
