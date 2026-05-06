@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Juego IA - Neon Racer</title>
+    <!-- Librerías para reconocimiento de gestos con Teachable Machine -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <!-- Lado izquierdo: el juego -->
+        <div class="game-area">
+            <canvas id="gameCanvas" width="400" height="600"></canvas>
+            
+            <!-- Menú de inicio y pausa -->
+            <div id="menu-overlay">
+                <div class="menu-content">
+                    <h1>NEON RACER</h1>
+                    
+                    <div class="high-score-tag">🏆 RÉCORD: NIVEL <span id="high-score-val">1</span></div>
+                    
+                    <p id="status-ia">🟡 INICIANDO IA...</p>
+
+                    <!-- Selector de color del auto -->
+                    <div class="menu-section">
+                        <h3>🎨 COLOR NEON</h3>
+                        <div class="color-grid">
+                            <button class="color-card active" data-color="#0f0" style="--clr: #0f0;">
+                                <div class="glow"></div>
+                                <span>VERDE</span>
+                            </button>
+                            <button class="color-card" data-color="#00ffff" style="--clr: #00ffff;">
+                                <div class="glow"></div>
+                                <span>CIAN</span>
+                            </button>
+                            <button class="color-card" data-color="#ff00ff" style="--clr: #ff00ff;">
+                                <div class="glow"></div>
+                                <span>MAGENTA</span>
+                            </button>
+                            <button class="color-card" data-color="#ffff00" style="--clr: #ffff00;">
+                                <div class="glow"></div>
+                                <span>AMBAR</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Selector de diseños/decalcomanías -->
+                    <div class="menu-section">
+                        <h3>⚡ DECALCOMANÍA</h3>
+                        <div class="design-grid">
+                            <button class="design-btn active" data-design="ninguno">LISO</button>
+                            <button class="design-btn" data-design="racer">FRANJAS</button>
+                            <button class="design-btn" data-design="flamas">FLAMAS</button>
+                            <button class="design-btn" data-design="cyber">CYBER</button>
+                        </div>
+                    </div>
+
+                    <!-- Activar/desactivar carro guía con IA -->
+                    <div class="menu-section">
+                        <h3>🤖 ASISTENTE NEURAL</h3>
+                        <div class="help-grid">
+                            <button id="help-toggle-btn" class="design-btn">ASISTENCIA: OFF</button>
+                        </div>
+                    </div>
+
+                    <!-- Botón para empezar a jugar -->
+                    <button id="start-btn" class="btn-primary" disabled>▶ INICIAR MOTOR</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lado derecho: panel de control con cámara -->
+        <div class="control-panel">
+            <h2>🎮 NAVEGACIÓN IA</h2>
+            
+            <!-- Aquí se muestra el video de la cámara -->
+            <div id="webcam-container">
+                <!-- La cámara se inserta automáticamente aquí -->
+            </div>
+            
+            <div class="action-display">
+                <p>COMANDO DETECTADO</p>
+                <div id="current-action">⚡ ESPERANDO...</div>
+            </div>
+
+            <!-- Instrucciones con emojis de manos -->
+            <div class="instrucciones">
+                <p><span>ACELERAR</span> <span class="key">👆🏻</span></p>
+                <p><span>GIRAR IZQUIERDA</span> <span class="key">🫲🏻</span></p>
+                <p><span>GIRAR DERECHA</span> <span class="key">🫱🏻</span></p>
+                <p><span>QUIETO</span> <span class="key">🤚🏻</span></p>
+            </div>
+
+            <div class="credit">
+                <p>Control por gestos | Teachable Machine</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lógica principal del juego -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
