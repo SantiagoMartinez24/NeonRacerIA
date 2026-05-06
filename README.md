@@ -4,7 +4,7 @@ Juego de carro el cual se controla con gestos de la mano usando la camara web.
 
 ## Jugar en línea
 
- Link Para jugar en linea: https://SantiagoMartinez24.github.io/NeoRacerIA/
+ Link Para jugar en linea: https://santiagomartinez24.github.io/NeonRacerIA/
 
 ## Que hace el juego
 
