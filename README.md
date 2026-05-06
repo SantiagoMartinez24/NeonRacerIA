@@ -2,6 +2,10 @@
 
 Juego de carro el cual se controla con gestos de la mano usando la camara web.
 
+## Jugar en línea
+
+ Link Para jugar en linea: https://SantiagoMartinez24.github.io/NeoRacerIA/
+
 ## Que hace el juego
 
 El juego reconoce 4 gestos:
