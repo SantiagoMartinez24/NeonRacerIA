@@ -1,5 +1,4 @@
 /**
- * IA_GUIA.JS
  * Algoritmo de búsqueda de trayectoria con análisis de costos por carril
  */
 
