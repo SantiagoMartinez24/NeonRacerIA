@@ -1,5 +1,4 @@
 /**
- * COMPONENTES.JS
  * Clases de los objetos del juego
  */
 
