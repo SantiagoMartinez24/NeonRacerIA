@@ -1,5 +1,4 @@
 /**
- * MOTOR_GRAFICO.JS
  * Renderizado y efectos visuales
  */
 
