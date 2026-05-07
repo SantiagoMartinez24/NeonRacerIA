@@ -1,5 +1,4 @@
 /**
- * LOGICA_JUEGO.JS
  * Control del juego, IA de enemigos y carro guía
  */
 import { AlgoritmosIA } from './ia_algoritmos.js';
