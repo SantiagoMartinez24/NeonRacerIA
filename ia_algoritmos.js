@@ -1,5 +1,4 @@
 /**
- * IA_ALGORITMOS.JS
  * Máquina de Estados Finitos (FSM) para enemigos
  */
 
